@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
   namespace :admins_backoffice do
     get 'welcome/index'
-  end
+  end 
   devise_for :profiles
   devise_for :admins
   get 'welcome/index'
