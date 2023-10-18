@@ -274,6 +274,9 @@ GEM
     thor (1.2.2)
     tilt (2.3.0)
     timeout (0.4.0)
+    tty-cursor (0.7.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
     turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -316,6 +319,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  tty-spinner
   turbo-rails
   tzinfo-data
   web-console
