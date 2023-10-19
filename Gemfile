@@ -3,7 +3,8 @@ source "https://rubygems.org"
 ruby "3.1.4"
 gem 'solargraph', group: :development
 gem 'tty-spinner'
-
+gem 'sass-rails'
+gem 'coffee-rails', '~> 4.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
@@ -24,6 +25,9 @@ gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
+
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+# gem 'turbolinks', '~> 5'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
