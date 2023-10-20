@@ -30,8 +30,8 @@ namespace :dev do
     10.times do |i|
       Admin.create!(
       email: Faker::Internet.email,
-      password: DEFAULT_PASSWORD,
-      password_confirmation: DEFAULT_PASSWORD
+      password: 123456,
+      password_confirmation: 123456
     )
     end
   end
