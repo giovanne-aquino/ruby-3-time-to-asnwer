@@ -5,6 +5,7 @@ gem 'solargraph', group: :development
 gem 'tty-spinner'
 gem 'sass-rails'
 gem 'coffee-rails', '~> 4.2'
+gem 'faker' 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
