@@ -10,9 +10,9 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
   namespace :admins_backoffice do
-    get 'admins/index'
-    get 'welcome/index'
-  end 
+      get 'welcome/index'
+      resources :admins, only: [:index, :edit, :update]     
+  end
   devise_for :admins
 
   root to: 'site/welcome#index'
