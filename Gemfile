@@ -7,6 +7,8 @@ gem 'sass-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'faker' 
 gem 'htmlbeautifier'
+gem 'kaminari'
+gem 'kaminari-i18n'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
