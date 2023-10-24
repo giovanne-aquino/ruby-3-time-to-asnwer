@@ -33,3 +33,4 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
       render :index
     end
   end
+end

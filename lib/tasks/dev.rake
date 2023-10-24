@@ -12,7 +12,7 @@ namespace :dev do
       show_spinner("Criando o Administrador padrão...") { %x(rails dev:add_default_admin) }
       show_spinner("Criando o Usuário padrão...") { %x(rails dev:add_default_user) }
       show_spinner("Adicionando administradores extras...") { %x(rails dev:add_extra_admins) }
-      show_spinner("Cadastrando assuntos padrões...") { %x(railsdev:add_subjects) }
+      show_spinner("Cadastrando assuntos padrões...") { %x(rails dev:add_subjects) }
       show_spinner("Cadastrando algumas questões e respostas...") { %x(rails dev:add_answers_and_questions) }
       # show_spinner("xxxxxxxx...") { %x(rails dev:xxxxxxx) }
   else
