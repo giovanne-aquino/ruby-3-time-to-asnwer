@@ -30,3 +30,5 @@ Rails.application.config.assets.precompile += %w( jquery-2.2.3.js )
 Rails.application.config.assets.precompile += %w( img.jpg)
 
 Rails.application.config.assets.precompile += %w( admin_devise.js admin_devise.css )
+
+Rails.application.config.assets.precompile += %w( user_devise.js user_devise.css )
