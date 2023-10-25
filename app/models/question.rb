@@ -13,4 +13,12 @@ class Question < ApplicationRecord
  question = Question.create!(params[:question])
  question.answers
 
-  
+  # Scopes
+  scope :_search_, ->(page, term) {
+    includes(:answers)
+    .where("lower(description) LIKE ?", "%#{term.downcase}%")
+    .page(page)
+    }
+    scope :last_questions, ->(page) {
+    includes(:answers).order('created_at desc').page(page)
+    }
