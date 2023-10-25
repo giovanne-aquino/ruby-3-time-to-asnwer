@@ -12,3 +12,5 @@ class Question < ApplicationRecord
 }}
  question = Question.create!(params[:question])
  question.answers
+
+  
