@@ -32,3 +32,5 @@ Rails.application.config.assets.precompile += %w( img.jpg)
 Rails.application.config.assets.precompile += %w( admin_devise.js admin_devise.css )
 
 Rails.application.config.assets.precompile += %w( user_devise.js user_devise.css )
+
+Rails.application.config.assets.precompile += %w( site.js site.css surface-fix.js surface-fix.css navbar.css )
