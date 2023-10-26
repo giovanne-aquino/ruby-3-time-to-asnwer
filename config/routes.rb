@@ -18,8 +18,19 @@ Rails.application.routes.draw do
     resources :subjects # Assuntos/Áreas
     resources :questions # Perguntas
   end
-  devise_for :admins
 
+  namespace :users_backoffice do
+    get 'welcome/index'
+    get 'profile', to: 'profile#edit'
+  end
+
+  namespace :users_backoffice do
+    get 'welcome/index'
+    get 'profile', to: 'profile#edit'
+    patch 'profile', to: 'profile#update'
+  end
+
+  devise_for :admins, :skip => [:registrations]
   root to: 'site/welcome#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
