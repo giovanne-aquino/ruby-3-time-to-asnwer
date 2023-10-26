@@ -1,7 +1,7 @@
 class Site::AnswerController < SiteController
   def question
     @answer = Answer.find(params[:answer_id])
-    set_user_statistic(@answer)
+    UserStatistic.set_statistic(@answer, current_user)
   end
 private
   def set_user_statistic(answer)
