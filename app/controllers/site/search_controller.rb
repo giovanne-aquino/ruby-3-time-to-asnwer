@@ -7,4 +7,3 @@ class Site::SearchController < SiteController
     params[:subject_id])
   end
  end
- 
