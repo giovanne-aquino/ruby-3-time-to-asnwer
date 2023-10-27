@@ -49,15 +49,13 @@
 
   }
 </script>
-
 <!-- Main component for a primary marketing message or call to action -->
 <div class="jumbotron">
   <h3><%= msg_jumbotron %></h3>
 </div>
-
 <% @questions.each do |question| %>
   <%= form_with url: site_answer_path do |form| %>
-    <div class="panel panel-default">
+    <div class="panel panel-default" id="question-<%= question.id %>">
       <div class="panel-heading">
         <h3 class="panel-title">
           <span class="label label-info" style="margin-right: 10px;">
@@ -69,30 +67,29 @@
       <div class="panel-body">
         <ul>
           <% question.answers.each do |answer| %>
-            <li style="list-style:none;" >
+            <li  style="list-style:none;" >
               <div class="radio">
-                <label>
-                  <%= radio_button_tag 'answer_id', answer.id %>
+                <label class="label-resposta"  >
+                  <%= radio_button_tag 'answer_id', answer.id, value: "#{answer.correct}" %>
                   <%= answer.description %>
                 </label>
               </div>
             </li>
           <% end %>
           <li style="list-style:none;">
-            <%= form.submit "Responder", class:"btn btn-default", id: "submit_#{question.id}" %>
+            <button type="button" onClick="validAnswer('<%= question.id %>')"  class="btn btn-default">Responder</button>
           </li>
         </ul>
       </div>
     </div>
   <% end %>
 <% end %>
-
 <% if user_signed_in? %>
   <div class="text-center">
     <%= paginate @questions %>
   </div>
 <% else %>
   <div class="alert alert-warning" role="alert">
-    Efetue login para poder continuar respondendo as questões...
+    Efetue login para poder navegar em todas as perguntas...
   </div>
 <% end %>
