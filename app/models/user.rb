@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   after_create :set_statistic
 
-  validates :first_name, presence: true, length: { minimum:2 }, on: :update
+  validates :first_name, presence: true, length: { minimum:2 }, on: :update, unless: :reset_password_token_present?
          
   def full_name
     [self.first_name, self.last_name].join(' ')
